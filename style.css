@@ -146,7 +146,13 @@ input.open1{
     div#commondiv{
         margin-top: 60px; 
         height: 2950px;
+         border: 1px solid #00ddff;
      }
+body{
+   background: #00ddff;
+}
+
+
 }
 @media only screen and (max-width:390px) {
 div#commondiv
