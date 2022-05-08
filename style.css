@@ -140,26 +140,23 @@ input.open1{
 
  }
 
+
 }
 
 @media only screen and (max-width:618px) {
     div#commondiv{
         margin-top: 60px; 
         height: 2950px;
-         border: 1px solid #00ddff;
+        border:1px solid #00ddff;
      }
-body{
-   background: #00ddff;
+     body{
+
+      background : #00ddff;
+
+     }
 }
 
-
-}
-@media only screen and (max-width:390px) {
-div#commondiv
-    {
-    height: 3450px;
-    }
-}
+ 
 
 @media only screen and (max-width:357px) {
     div#commondiv{
@@ -198,6 +195,6 @@ input.option{
     height: 25px;
     background-color: white;
     border-radius: 20px;
-    border: 1px solid black;
+    border: 1px solid white;
     margin: 0px 10px;
 }
