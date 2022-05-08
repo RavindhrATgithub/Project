@@ -1,5 +1,4 @@
 
-
 function call() {
   
     var u=document.getElementById("Suname").value;
