@@ -148,6 +148,12 @@ input.open1{
         height: 2950px;
      }
 }
+@media only screen and (max-width:390px) {
+div#commondiv
+    {
+    height: 3450px;
+    }
+}
 
 @media only screen and (max-width:357px) {
     div#commondiv{
