@@ -1,4 +1,5 @@
 
+
 function call() {
   
     var u=document.getElementById("Suname").value;
@@ -83,6 +84,11 @@ var tempdiv=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var flag=0;
 function subcall(num){
 
+    if(check[num-1]==1)
+    {
+        alert("You have already completed this!"); return
+    }
+
     var YEAR=document.getElementsByName('year');
         var yearselector="";
         if(YEAR[0].checked)
@@ -144,7 +150,9 @@ function subcall(num){
          var y=sdiv[subject-1];
          y.style.border="4px solid rgb(187 238 241)";
          y.style.background="radial-gradient(#f1f6f7, #8cecfb)";
-         alert((++counting)+" Subjects completed");
+         if(counting<=5){
+         alert((++counting)+" Subjects completed");}
+         
          if(counting==6){
 
           document.getElementById("Username").value=document.getElementById("Suname").value;
@@ -191,8 +199,9 @@ function fillanswer(quesno,givenans,obj){
    }
     obj.style.background="rgb(255 201 5)";
     obj.style.filter="drop-shadow(5px 5px 5px 15px black)";
-    obj.style.width="92px";
-    obj.style.height="27px"
+    obj.style.width="90px";
+    obj.style.height="25px"
 
 
 }
+
