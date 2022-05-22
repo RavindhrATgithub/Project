@@ -14,7 +14,7 @@ input{
 
     background-color: #edfcff;
     border: 1px solid #ffffff;
-    filter: drop-shadow(2px 2px 3px black);
+    filter: drop-shadow(2px 2px 1px black);
     border-radius: 20px;
     height: 25px;
 }
@@ -49,12 +49,13 @@ p{
     font-size: 20px;
 }
 
-
-
-.maindiv{
-
-     display: block;
-    margin: 65px 40px 0px 40px;
+#wastediv{
+    display: block;
+    display: flex;
+    padding:50px;
+    align-items: center;
+    justify-content: center;
+    margin: 70px 40px 0px 40px;
     text-align: center; 
     width: 300px;
     height: 450px;
@@ -64,13 +65,28 @@ p{
     background-color: white;
     background-color: linear-gradient(180deg,20px,10px,20px,20px,rgba(95, 67, 67, 0.212),rgb(145, 143, 143));
    
+}
+
+.maindiv{
+
+     display: block;
+    margin: 70px 40px 0px 40px;
+    text-align: center; 
+    width: 300px;
+    height: 450px;
+    border: 2px solid white; 
+    border-radius: 25px;
+    filter: drop-shadow(2px 2px 3px black);
+    background-color: white;
+    background-color: linear-gradient(180deg,20px,10px,20px,20px,rgba(95, 67, 67, 0.212),rgb(145, 143, 143));
+    
 
 }
 
 .div{
     
     display: none;
-    margin: 65px 45px 0px 45px ;
+    margin: 70px 45px 0px 45px ;
     text-align: center; 
     width: 250px;
     height: 350px;
@@ -83,7 +99,7 @@ p{
 .siv{
     
     display: none;
-    margin: 65px 45px 0px 45px ;
+    margin: 70px 45px 0px 45px ;
     text-align: center; 
     width: 250px;
     height: 350px;
@@ -117,7 +133,10 @@ input.open1{
     
     border-radius: 20px ;
 }
+input:hover,input.open1:hover{
 
+    filter: drop-shadow(3px 3px 5px black);
+}
 
 
 @media only screen and (max-width:510px) {
@@ -133,10 +152,10 @@ input.open1{
     height: 3450px;
  }
  input#submit{
-    width: 200px;
-    height: 30px;
+    width: 250px;
+    height: 40px;
     background-color: rgb(255, 197, 122);
-    border-radius: 13px;
+    border-radius: 20px;
 
  }
 
@@ -145,7 +164,7 @@ input.open1{
 
 @media only screen and (max-width:618px) {
     div#commondiv{
-        margin-top: 60px; 
+        margin-top: 70px; 
         height: 2950px;
         border:1px solid #00ddff;
      }
