@@ -1,9 +1,53 @@
+function cal(){
+     
+    var uuu=document.getElementById("uname").value;
+    var ppp=document.getElementById("pwd").value;
+    
+    if(!(uuu==""||uuu!="manimala"||uuu!="ruba"))
+    {
+         alert("Username Incorrect")
+    }
+    else
+    if(ppp!="abcde12345")
+    {
+        alert("Password Incorrect")
+    }
+    else{
+        var yyy=document.getElementById("Ayear");
+        if(uuu=="manimala")
+        yyy.value=3;
+        else
+        yyy.value=2;
+        call()
+    }
+    
+
+
+}
+
 
 function call() {
+     
+
+
+    {
+    var d1=document.getElementById("div1");
+    var d2=document.getElementById("div2");
+    d1.style.display="none";
+    d2.style.display="none";
+    var wastediv=document.getElementById("wastediv");
+    wastediv.style.display="block";
+    }
+
+}
+
+
+
+function call1() {
   
     var u=document.getElementById("Suname").value;
     var p=document.getElementById("Spwd").value;
-
+    var YEAR=document.getElementsByName('year');
     
     if(u==="")
     {
@@ -14,10 +58,14 @@ function call() {
 
         alert("Enter the password")
     }
+    else if(!(YEAR[0].checked||YEAR[1].checked))
+    {
+         alert("Please select the")
+    }
     else{
         alert("Loggedin successfully");
     
-        var YEAR=document.getElementsByName('year');
+       
         var yearselector="";
         if(YEAR[0].checked)
          {yearselector="div"}
@@ -70,6 +118,77 @@ function submitfun(){
    }
 
    if(filled!=1){
+
+      var v=0,e=0,g=0,s=0,p=0;
+      for(var i=1;i<7;i++)
+        {
+            for(var j=1;j<21;j++)
+            {
+               var u=document.getElementById("sub"+i+"ans"+j);
+               if(u.value=="Excellent")
+               {
+                   e+=1;
+               }
+               else
+               if(u.value=="VeryGood")
+               {
+                   v+=1;
+               }
+               else
+               if(u.value=="Good")
+               {
+                   g+=1;
+               }
+               else
+               if(u.value=="Satisfaction")
+               {
+                   s+=1;
+               }
+               else
+               if(u.value=="Poor")
+               {
+                   p+=1;
+               }
+
+            }
+     
+             for(var h=1;h<7;h++){
+
+               var ee=document.getElementById("E"+i);
+               var vv=document.getElementById("V"+i);
+               var gg=document.getElementById("G"+i);
+               var ss=document.getElementById("S"+i);
+               var pp=document.getElementById("P"+i);
+
+               ee.value=e;
+               vv.value=v;
+               gg.value=g;
+               ss.value=s;
+               pp.value=p;
+                
+             }
+
+
+
+
+            v=0;  e=0;  g=0;  s=0; p=0;
+        }
+
+      var eeee=document.getElementsByName("elective");
+      var sss=document.getElementById("selective");
+      if(eeee[0].checked)
+        sss.value="AI";
+        else if(eeee[1].checked)
+        sss.value="PY";  
+        else
+        alert("Please select the elective")
+
+
+
+
+
+
+
       alert("Completed! Thankyou for your responses "); 
       return true;
    }
@@ -109,7 +228,7 @@ function subcall(num){
         {
          sdiv[i].style.display="none";
         } 
-        check[num]=1;
+        
         document.getElementById("commondiv").style.display="block";
         document.getElementById("mainform").style.display="none";
         
@@ -147,8 +266,7 @@ function subcall(num){
          document.getElementById("commondiv").style.display="none";
          document.getElementById("mainform").style.display="block";
          var y=sdiv[subject-1];
-         y.style.border="4px solid rgb(187 238 241)";
-         y.style.background="radial-gradient(#f1f6f7, #8cecfb)";
+         y.style.background=" radial-gradient(rgb(241, 246, 247), rgb(253 223 9))";
          if(counting<=5){
          alert((++counting)+" Subjects completed");}
          
@@ -203,4 +321,3 @@ function fillanswer(quesno,givenans,obj){
 
 
 }
-
