@@ -10,7 +10,7 @@
     
     <h2 style="text-align: center;" >Web-based Student Feedback System</h2> 
 </head>
-<body>
+<body id="body">
      <script src="./script.js"> </script>
    <div id="div1" class="maindiv">
       
@@ -18,10 +18,18 @@
      <p>Username</p>  
      <input type="text" minlength="7" id="uname" name="Ausername" value="" required autocomplete="off"> <br><br>
      <p>Password</p>   
-     <input type="text" minlength="7" id="pwd" name="Apassword" value="" required autocomplete="off">  <br><br><br><br>
-     <input  type="button" class="open1"  value="LOGIN" onclick="call()">
-   
+     <input type="password" minlength="7" id="pwd" name="Apassword" value="" required autocomplete="off">  <br><br><br><br>
+     
+     <input  type="button" class="open1"  value="LOGIN" onclick="cal()">
+      
    </div>
+
+   <div id="wastediv" style="display: none;">
+      <form  action="http:localhost:100/display" method="get">
+          <input type="number" name="Ayear" style="display: none;"  id="Ayear" value="" >
+          <input type="submit" value="show results">
+      </form>
+     </div>
 
    <div id="div2" class="maindiv">
    
@@ -32,7 +40,7 @@
     <input type="text" minlength="7" id="Spwd" name="Spassword" placeholder="      Your password" value="" required autocomplete="off"><br><br><br><br>
     <input type="radio" id="year" name="year" value="2" required> <span style="color: rgb(215 123 29);">2nd year</span>
     <input type="radio" id="year" name="year" value="3" required> <span style="color: rgb(215 123 29);">3rd year</span> <br><br>
-    <input  type="button" class="open1"  value="LOGIN"  onclick="call()">
+    <input  type="button" class="open1"  value="LOGIN"  onclick="call1()">
     
   </div>
 
@@ -117,6 +125,8 @@
           <h4>ARTIFICIAL INTELLIGENCE / PYTHON PROGRAMMING</h4> <br>
           <h4>18CSPE602/ 18CSPE604</h4> <br>
           <h4>V. Manikandan/ K. Saraswathi</h4>
+          <input type="radio" id="elective" name="elective" value="AI" required> <span style="color: rgb(215 123 29);">AI</span>
+          <input type="radio" id="elective" name="elective" value="PY" required> <span style="color: rgb(215 123 29);">Python</span> <br><br>
           <input class="open1" type="button" value="OPEN" onclick="subcall(3)">
       </div> 
   
@@ -311,6 +321,7 @@
 
        <input type="text" name="Username" id="Username" value="" style="display: none;">
        <input type="number" name="Year" id="Year" value="" style="display: none;"> 
+       <input type="text" name="selective" id="selective" style="display: none;">
        
        <input type="text" name="sub1ans1" id="sub1ans1" value="" style="display: none;"> 
        <input type="text" name="sub1ans2" id="sub1ans2" value="" style="display: none;"> 
@@ -445,6 +456,45 @@
        <input type="text" name="sub6ans18" id="sub6ans18" value="" style="display: none;">
        <input type="text" name="sub6ans19" id="sub6ans19" value="" style="display: none;"> 
        <input type="text" name="sub6ans20" id="sub6ans20" value="" style="display: none;">
+
+
+       <input type="text" name="V1" id="V1" value=""  style="display: none;">
+       <input type="text" name="E1" id="E1" value=""  style="display: none;">
+       <input type="text" name="G1" id="G1" value=""  style="display: none;">
+       <input type="text" name="S1" id="S1" value=""  style="display: none;">
+       <input type="text" name="P1" id="P1" value=""  style="display: none;">
+
+
+       <input type="text" name="V2" id="V2" value=""  style="display: none;">
+       <input type="text" name="E2" id="E2" value=""  style="display: none;">
+       <input type="text" name="G2" id="G2" value=""  style="display: none;">
+       <input type="text" name="S2" id="S2" value=""  style="display: none;">
+       <input type="text" name="P2" id="P2" value=""  style="display: none;">
+
+       <input type="text" name="V3" id="V3" value=""  style="display: none;">
+       <input type="text" name="E3" id="E3" value=""  style="display: none;">
+       <input type="text" name="G3" id="G3" value=""  style="display: none;">
+       <input type="text" name="S3" id="S3" value=""  style="display: none;">
+       <input type="text" name="P3" id="P3" value=""  style="display: none;">
+
+       <input type="text" name="V4" id="V4" value=""  style="display: none;">
+       <input type="text" name="E4" id="E4" value=""  style="display: none;">
+       <input type="text" name="G4" id="G4" value=""  style="display: none;">
+       <input type="text" name="S4" id="S4" value=""  style="display: none;">
+       <input type="text" name="P4" id="P4" value=""  style="display: none;">
+
+       <input type="text" name="V5" id="V5" value=""  style="display: none;">
+       <input type="text" name="E5" id="E5" value=""  style="display: none;">
+       <input type="text" name="G5" id="G5" value=""  style="display: none;">
+       <input type="text" name="S5" id="S5" value=""  style="display: none;">
+       <input type="text" name="P5" id="P5" value=""  style="display: none;">
+
+       <input type="text" name="V6" id="V6" value=""  style="display: none;">
+       <input type="text" name="E6" id="E6" value=""  style="display: none;">
+       <input type="text" name="G6" id="G6" value=""  style="display: none;">
+       <input type="text" name="S6" id="S6" value=""  style="display: none;">
+       <input type="text" name="P6" id="P6" value=""  style="display: none;">
+        
 
        <br><br>
      <input type="submit"  id="submit" style="display: block;" value="SUBMIT">
