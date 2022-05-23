@@ -180,10 +180,14 @@ function submitfun(){
         sss.value="AI";
         else if(eeee[1].checked)
         sss.value="PY";  
-        else
+         else{
+         let kkk=document.getElementsByName("year");
+        if(kkk[1].checked){    
         alert("Please select the elective")
-
-
+        return false;}
+        else  
+        return true;
+        }
 
 
 
